@@ -1,0 +1,33 @@
+@import '../../styles/variables.scss';
+
+header {
+  height: 3rem;
+  background-color: $color4;
+
+  .header_content {
+    padding: 0 5rem;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    color: $textLight;
+
+    .home {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      justify-content: center;
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      padding: 0 1rem;
+    }
+  }
+}

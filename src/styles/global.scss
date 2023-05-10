@@ -20,6 +20,7 @@ html {
 
 body {
   min-width: 480px;
+  background-color: $background;
   -webkit-font-smoothing: antialised;
 }
 
@@ -53,9 +54,8 @@ button {
   outline: none;
   border: none;
   border-radius: 0.25rem;
-}
 
-[disabled] {
-  opacity: 0.7;
-  cursor: initial;
+  &:hover {
+    opacity: 0.8;
+  }
 }

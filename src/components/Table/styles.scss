@@ -1,0 +1,16 @@
+@import '../../styles/variables.scss';
+
+table {
+  td {
+    padding: 0.5rem 1rem;
+    border: 0;
+    background: $color4;
+    color: $textLight;
+    border-radius: 0.25rem;
+
+    &:last-child {
+      text-align: center;
+      font-weight: 600;
+    }
+  }
+}

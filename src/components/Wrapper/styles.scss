@@ -1,0 +1,23 @@
+@import '../../styles/variables.scss';
+
+main {
+  height: calc(100vh - 3rem);
+  padding: 1.5rem 5rem;
+  margin: auto;
+  max-width: 1200px;
+  width: 70%;
+
+  .page_content {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-flow: wrap;
+    gap: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  @media only screen and (max-width: 767px) {
+    width: 100%;
+    padding: 1.5rem 1rem;
+  }
+}

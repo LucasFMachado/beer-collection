@@ -1,4 +1,8 @@
+import Footer from '@/components/Footer'
 import '../styles/global.scss'
+
+import Header from '@/components/Header'
+import { ContextProvider } from '@/contexts'
 
 export const metadata = {
   title: 'Beer Collection',
@@ -11,7 +15,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <ContextProvider>
+          <Header />
+          {children}
+          <Footer />
+        </ContextProvider>
+      </body>
     </html>
   )
 }
