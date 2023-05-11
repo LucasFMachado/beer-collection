@@ -3,12 +3,21 @@ import './styles.scss'
 
 interface IWrapperProps {
   children: ReactNode
+  flexColumn?: boolean
 }
 
-export default function Wrapper({ children }: IWrapperProps) {
+export default function Wrapper({
+  children,
+  flexColumn = false,
+}: IWrapperProps) {
+  console.log('flexColumn', flexColumn)
   return (
     <main>
-      <div className="page_content">{children}</div>
+      <div
+        className={`${flexColumn ? ' page_content_column' : 'page_content'}`}
+      >
+        {children}
+      </div>
     </main>
   )
 }

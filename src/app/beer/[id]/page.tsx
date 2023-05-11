@@ -16,7 +16,7 @@ export default async function Beer({ params }: IBeerProps) {
   let beer = await getBeerInfo(params.id)
 
   return (
-    <Wrapper>
+    <Wrapper flexColumn>
       <HomeButton />
       <div className="beer_presentation">
         <h3>{beer.name}</h3>
