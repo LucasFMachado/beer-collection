@@ -3,10 +3,6 @@ export interface IBeer {
   name: string
   image_url: string
   description: string
-  volume: {
-    value: number
-    unit: string
-  }
   abv: number
   ibu: number
   ph: number

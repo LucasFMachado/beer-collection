@@ -10,6 +10,7 @@ header {
     height: 100%;
     align-items: center;
     color: $textLight;
+    justify-content: space-between;
 
     .home {
       display: flex;
@@ -24,6 +25,10 @@ header {
       &:hover {
         cursor: pointer;
       }
+    }
+
+    input {
+      width: 15rem;
     }
 
     @media only screen and (max-width: 767px) {

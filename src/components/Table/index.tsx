@@ -11,12 +11,6 @@ export default function Table({ beer }: ITableProps) {
     <table>
       <tbody>
         <tr>
-          <td>Volume</td>
-          <td>
-            {beer.volume.value} {beer.volume.unit}
-          </td>
-        </tr>
-        <tr>
           <td>ABV (alcohol by volume)</td>
           <td>
             <strong>{beer.abv}</strong>

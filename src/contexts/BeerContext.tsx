@@ -2,8 +2,7 @@
 
 import { getBeersList } from '@/requests/getBeersList'
 import { IBeer } from '@/utils/types'
-// import { destroyCookie, parseCookies, setCookie } from 'nookies'
-import type { Dispatch, ReactNode, SetStateAction } from 'react'
+import type { ReactNode } from 'react'
 import { createContext, useContext, useState } from 'react'
 
 interface IBeerProviderProps {
@@ -12,7 +11,7 @@ interface IBeerProviderProps {
 
 interface IBeerContext {
   beers: IBeer[]
-  getBeers: () => void
+  getBeers: (filter: string) => void
 }
 
 const BeerContext = createContext({} as IBeerContext)
@@ -20,8 +19,13 @@ const BeerContext = createContext({} as IBeerContext)
 const BeerProvider = ({ children }: IBeerProviderProps) => {
   const [beers, setBeers] = useState<IBeer[]>([])
 
-  async function getBeers() {
-    const beers = await getBeersList()
+  async function getBeers(search = '') {
+    let filter = ''
+    if (search) {
+      filter = `&beer_name=${search}`
+    }
+
+    const beers = await getBeersList(filter)
     setBeers(beers)
   }
 
